@@ -1,0 +1,249 @@
+/*! PhotoSwipe main CSS by Dmitry Semenov | photoswipe.com | MIT license */
+.pswp {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  -ms-touch-action: none;
+  touch-action: none;
+  z-index: 1500;
+  -webkit-text-size-adjust: 100%;
+  -webkit-backface-visibility: hidden;
+  outline: none; }
+  .pswp * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+  .pswp img {
+    max-width: none; }
+
+.pswp--animate_opacity {
+  opacity: 0.001;
+  will-change: opacity;
+  -webkit-transition: opacity 333ms cubic-bezier(0.4, 0, 0.22, 1);
+          transition: opacity 333ms cubic-bezier(0.4, 0, 0.22, 1); }
+
+.pswp--open {
+  display: block; }
+
+.pswp--zoom-allowed .pswp__img {
+  /* autoprefixer: off */
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in;
+  cursor: zoom-in; }
+
+.pswp--zoomed-in .pswp__img {
+  /* autoprefixer: off */
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab; }
+
+.pswp--dragging .pswp__img {
+  /* autoprefixer: off */
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing; }
+
+.pswp__bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  will-change: opacity; }
+
+.pswp__scroll-wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  will-change: transform; }
+
+.pswp__container, .pswp__zoom-wrap {
+  -ms-touch-action: none;
+  touch-action: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0; }
+
+.pswp__container, .pswp__img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none; }
+
+.pswp__zoom-wrap {
+  position: absolute;
+  width: 100%;
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transition: -webkit-transform 333ms cubic-bezier(0.4, 0, 0.22, 1);
+          transition: transform 333ms cubic-bezier(0.4, 0, 0.22, 1); }
+
+.pswp__bg {
+  will-change: opacity;
+  -webkit-transition: opacity 333ms cubic-bezier(0.4, 0, 0.22, 1);
+          transition: opacity 333ms cubic-bezier(0.4, 0, 0.22, 1); }
+
+.pswp--animated-in .pswp__bg, .pswp--animated-in .pswp__zoom-wrap {
+  -webkit-transition: none;
+  transition: none; }
+
+.pswp__container, .pswp__zoom-wrap {
+  -webkit-backface-visibility: hidden;
+  will-change: transform; }
+
+.pswp__item {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden; }
+
+.pswp__img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  -webkit-transition: opacity 0.15s;
+          transition: opacity 0.15s; }
+
+.pswp__img--placeholder {
+  -webkit-backface-visibility: hidden; }
+
+.pswp__img--placeholder--blank {
+  background: #000; }
+
+.pswp--ie .pswp__img {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0; }
+
+.pswp__error-msg {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: -8px;
+  color: #CCC; }
+
+.pswp__error-msg a {
+  color: #CCC;
+  text-decoration: underline; }
+
+
+
+/* contents */
+.gallery-contents {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  touch-action: none;
+  background-color: rgba(0, 0, 0, 0.9);
+
+  display: none;
+  z-index: 1501;
+}
+
+.gallery-contents__container {
+  border: 1px solid gray;
+  background-color: lightgray;
+  border-radius: 3px;
+
+  width: 400px;
+  height: 90%;
+
+  position: fixed;
+  
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.gallery-contents__header {
+  position: relative;
+  bottom: 0px;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color:#000000;font:17px/27px "Cuprum", sans-serif;
+}
+
+.gallery-contents__list {
+  display: inline-block;
+  overflow-x:hidden;
+  overflow-y:scroll;
+  height: 85%;
+}
+
+.gallery-contents__element {
+  width: 182px;
+  height: 131px;
+
+  cursor: pointer;
+  display: inline-block;
+  width: 180px;
+  margin: 4px 4px;
+  border: 1px solid lightgray;
+  background-color: white;
+}
+
+.gallery-contents__element figcaption {
+  text-align: center;
+    margin: -2px 13px -1px 13px;
+    padding: 0;
+    font-size: 10pt;
+}
+
+.gallery-contents__element img {
+  width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.gallery-contents__button--close, .gallery-contents__button--close:hover {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  cursor: pointer;
+  display: block;
+  width: 38px;
+  height: 35px;
+  background-color: darkgray;
+  border-radius:20px; 
+  text-align:center;
+  text-decoration:none; 
+  font:15px/38px "Cuprum", sans-serif;
+  color:#ebebeb;
+
+  background: -webkit-linear-gradient(top, rgb(102, 104, 106) 0%, rgb(64, 67, 69) 62%);
+  background: -o-linear-gradient(top, rgb(102, 104, 106) 0%, rgb(64, 67, 69) 62%);
+  background: -ms-linear-gradient(top, rgb(102, 104, 106) 0%, rgb(64, 67, 69) 62%);
+  background: -moz-linear-gradient(top, rgb(102, 104, 106) 0%, rgb(64, 67, 69) 62%);
+  background: linear-gradient(to bottom, rgb(102, 104, 106) 0%, rgb(64, 67, 69) 62%);
+
+  background-image: url("default-skin/quit.png");
+}

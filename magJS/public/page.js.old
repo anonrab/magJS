@@ -1,0 +1,168 @@
+if (window.addEventListener)
+	window.addEventListener("load", init, false);
+else if (window.attachEvent)
+	window.attachEvent("onload", init);
+else window.onload = init;
+
+function init() {
+	// allJournals = getTestJournalData2();
+
+ //    var ractive = new Ractive({
+ //      el: 'container',
+ //      template: '#template',
+ //      data: {
+ //      	journals: allJournals
+ //      }
+ //    });
+}
+
+
+//Возвращает массив с журналами Hair's How
+function getTestJournalData() {
+	var dataJournals = [
+		{
+			number: 173,
+			maxPage: 280,
+			date: 'Июль-Август 2013',
+			pageW: 1380,
+			pageH: 1782
+		},
+		{
+			number: 174,
+			maxPage: 280,
+			date: 'Сентябрь 2013',
+			pageW: 1380,
+			pageH: 1782
+		},
+		{
+			number: 175,
+			maxPage: 280,
+			date: 'Октябрь 2013',
+			pageW: 1380,
+			pageH: 1782
+		},
+		{
+			number: 176,
+			maxPage: 296,
+			date: 'Ноябрь 2013',
+			pageW: 1380,
+			pageH: 1782
+		},
+		{
+			number: 177,
+			maxPage: 276,
+			date: 'Декабрь 2013',
+			pageW: 1380,
+			pageH: 1782
+		},
+		{
+			number: 178,
+			maxPage: 260,
+			date: 'Январь-Февараль 2014',
+			pageW: 1380,
+			pageH: 1782
+		},
+		{
+			number: 179,
+			maxPage: 268,
+			date: 'Март 2014',
+			pageW: 1380,
+			pageH: 1782
+		},
+		{
+			number: 180,
+			maxPage: 268,
+			date: 'Апрель 2014',
+			pageW: 1380,
+			pageH: 1782
+		},
+		{
+			number: 181,
+			maxPage: 268,
+			date: 'Май 2014',
+			pageW: 1380,
+			pageH: 1782
+		},
+		{
+			number: 182,
+			maxPage: 268,
+			date: 'Июнь 2014',
+			pageW: 1380,
+			pageH: 1782
+		},
+		{
+			number: 183,
+			maxPage: 260,
+			date: 'Июль-Август 2014',
+			pageW: 1380,
+			pageH: 1782
+		},
+		{
+			number: 184,
+			maxPage: 284,
+			date: 'Сентябрь 2014',
+			pageW: 1380,
+			pageH: 1782
+		},
+		{
+			number: 185,
+			maxPage: 260,
+			date: 'Октябрь 2014',
+			pageW: 1380,
+			pageH: 1782
+		},
+		{
+			number: 186,
+			maxPage: 268,
+			date: 'Ноябрь 2014',
+			pageW: 1380,
+			pageH: 1782
+		},
+		{
+			number: 187,
+			maxPage: 262,
+			date: 'Декабрь 2014',
+			pageW: 1380,
+			pageH: 1782
+		},
+		{
+			number: 188,
+			maxPage: 238,
+			date: 'Январь-Февараль 2015',
+			pageW: 1380,
+			pageH: 1782
+		}
+	];
+	dataJournals.reverse();
+
+	for(var i=0; i<dataJournals.length; i++) {
+		var j = dataJournals[i];
+		j.id = i;
+		j.url = '//hair.su/mags/hh/' + j.number  + '/';
+		j.img = '//hair.su/mags/hh/' + j.number + '/cover.jpg';
+		j.pageW = 1380;
+		j.pageH = 1782;
+	}
+
+	return dataJournals;
+}
+
+//Возвращает массив с журналами Hair's How
+function getTestJournalData2() {
+	var dataJournals = [];
+	dataJournals.reverse();
+
+	for(var i=0; i<13; i++) {
+		j = {};
+		j.number = 116+i;
+		j.maxPage = 78
+		j.id = i;
+		j.url = '//hair.su/mags/dhh/' + j.number  + '/';
+		j.img = '//hair.su/mags/dhh/' + j.number + '/cover.jpg';
+		j.pageW = 1339;
+		j.pageH = 1740;
+		dataJournals[i] = j;
+	}
+
+	return dataJournals;
+}

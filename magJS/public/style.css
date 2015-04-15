@@ -1,0 +1,134 @@
+/** reset CSS **/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+}
+ol, ul {
+	list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+
+
+body {
+	background-color: litegray;
+}
+
+.journal-block {
+	display: inline-block;
+	margin: 5px 5px;
+	background-color: #ffffff;
+	border: 1px solid white;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.read-button {
+	display: block;
+	margin-top: -7px;
+
+	height: 38px;
+  	line-height: 38px;
+	border-radius: 3px;
+
+	text-align: center;
+	text-transform: uppercase;
+
+	background: #916e36; /* Old browsers */
+	background: -moz-linear-gradient(top,  #916e36 0%, #6b4719 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#916e36), color-stop(100%,#6b4719)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #916e36 0%,#6b4719 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #916e36 0%,#6b4719 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #916e36 0%,#6b4719 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #916e36 0%,#6b4719 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#916e36', endColorstr='#6b4719',GradientType=0 ); /* IE6-9 */
+}
+
+.read-button:active {
+	background: #6b4719; /* Old browsers */
+	background: -moz-linear-gradient(top,  #6b4719 0%, #916e36 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6b4719), color-stop(100%,#916e36)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #6b4719 0%,#916e36 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #6b4719 0%,#916e36 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #6b4719 0%,#916e36 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #6b4719 0%,#916e36 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b4719', endColorstr='#916e36',GradientType=0 ); /* IE6-9 */
+}
+
+.box-header {
+	display: block;
+	background: #e1071f;
+	margin-bottom: 1px;
+	padding: 0 9px;
+	border-radius: 3px;
+	height: 27px;
+}
+
+p, a, figcaption {
+	margin: 0px;
+	font: 17px/27px "Cuprum", sans-serif;
+	color: white;
+}
+
+.box-header .left {
+	float: left;
+}
+
+.box-header .right {
+	float: right;
+}
+
+/*scroll*/
+
+::-webkit-scrollbar {
+	right: 20px;
+    height: 12px;
+	width: 12px;
+	background: #F7F7F7;
+}
+
+::-webkit-scrollbar-thumb {
+    background: gray;
+    -webkit-border-radius: 1ex;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+::-webkit-scrollbar-corner {
+    background: #F7F7F7;
+}
